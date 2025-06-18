@@ -1,0 +1,29 @@
+<mujoco model="bug">
+  <asset>
+      <mesh name="bug_mesh" file="bug_mesh.obj"/>
+  </asset>
+  <worldbody>
+    <body name="body11" pos="0 0 0.7">
+      <joint name="joint11" type="free"/>
+      <inertial mass="1" pos="0 0 0" fullinertia="1 1 1 0 0 0"/>
+      <body name="body12" pos="0.29785 -0.055 0">
+        <inertial pos="0 0 0" mass="1" fullinertia="1 1 1 0 0 0"/>
+        <joint name="joint12" pos="0 0 0" axis="1 0 0" range="-0.785398 0.785398"/>
+        <body name="body13" pos="0 -0.110945 0">
+          <inertial pos="0 0 0" mass="1" fullinertia="1 1 1 0 0 0"/>
+          <joint name="joint13"  pos="0 0 0" axis="0 1 0" range="-0.898845 2.295108"/>
+          <body name="body14" pos="0.025 0 -0.3205">
+            <inertial pos="0 0 0" mass="1" fullinertia="1 1 1 0 0 0"/>
+            <joint name="joint14"  pos="0 0 0" axis="0 1 0" range="-2.7929 -0.2471"/>
+            <geom name="collision1"   type="capsule" size="0.03 0.15" pos="0 0 -0.155"/>
+          </body>
+        </body>
+      </body>
+    </body>
+
+    <body name="body2">
+        <joint name="joint2" type="free"/>
+        <geom name="collision2" type="mesh" mesh="bug_mesh"/>
+    </body>
+  </worldbody>
+</mujoco>
